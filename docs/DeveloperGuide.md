@@ -323,7 +323,7 @@ results based on the specified criteria.
 
 ### Export feature
 
-## Implementation
+#### Implementation
 
 The `export` command extends `FileAccessCommand` and by extension, `Command`. The `export` command exports the contacts in DorManagerPro to a JSON file in the data folder of the app. 
 
@@ -342,12 +342,6 @@ Step 2: The `export` command exports all data currently contained by DorManagerP
 The following sequence diagram shows how an `export` command goes through the `Logic` component:
 
 <puml src="diagrams/ExportSequenceDiagram.puml" alt="ExportSequenceDiagram" />
-
-<box type="info" seamless>
-
-**Note:** The lifeline for `ExportCommand` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
-
-</box>
 
 The following activity diagram summarizes what happens when a user executes an `export` command:
 
@@ -372,7 +366,7 @@ The following activity diagram summarizes what happens when a user executes an `
 
 ### Import feature
 
-### Implementation
+#### Implementation
 
 The `import` command extends `FileAccessCommand` and by extension, `Command`. It also implements `Undoable`. `import` loads data from a save file into DorManagerPro, with the file path of the save file provided by the user. The `import` command is undoable.
 
